@@ -50,7 +50,7 @@ cat  %{buildroot}%{grcoscdir}/osc-grc.conf >> %{buildroot}%{_sysconfdir}/grc.con
 
 %files
 %defattr(644,root,root)
-%{buildroot}%{_sysconfdir}/grc.conf
+%{_sysconfdir}/grc.conf
 %defattr(755,root,root)
 %{grcoscdir}
 
