@@ -41,14 +41,14 @@ OSC conf files for GRC
 
 %install
 mkdir -p %{buildroot}%{_sysconfdir}/grc.conf.d/
-install -Dm 0755 grc.conf.d/00-grc-osc.conf %{buildroot}%{_sysconfdir}/00-grc-osc.conf
+install -Dm 0755 grc.conf.d/00-osc.conf %{buildroot}%{_sysconfdir}/grc.conf.d/00-osc.conf
 mkdir -p %{buildroot}%{_datadir}/grc/
 install -m 0644 conf.* %{buildroot}%{_datadir}/grc/
 
 %files
 %license LICENSE
 %doc README.md
-%config %{_sysconfdir}/00-grc-osc.conf
+%config %{_sysconfdir}/grc.conf.d/00-osc.conf
 %{_datadir}/grc/
 
 %changelog
