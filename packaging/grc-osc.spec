@@ -41,9 +41,12 @@ OSC conf files for GRC
 %install
 mkdir -p %{buildroot}%{grcoscdir}
 cp -r * %{buildroot}%{grcoscdir}
-cat %{grcoscdir}"/osc-grc.conf" >> %{buildroot}/etc/grc.conf
+test -f %{buildroot}/etc/grc.conf || touch %{buildroot}/etc/grc.conf
+cat %{grcoscdir}/osc-grc.conf >> %{buildroot}/etc/grc.conf
 
 %files
+%defattr(644,root,root)
+/etc/grc.conf
 %defattr(755,root,root)
 %{grcoscdir}
 
