@@ -19,7 +19,7 @@
 %define grcoscdir /opt/grc-osc
 
 Name:           grc-osc
-Version:        1.2
+Version:        0.1
 Release:        0
 Summary:        OSC conf files for GRC
 License:        MIT
@@ -27,8 +27,9 @@ Group:          Development/Tools/Other
 Url:            https://github.com/StayPirate/grc-conf-osc
 Source:         %{archive_prefix}-%{version}.tar.xz
 BuildArch:      noarch
-Requires:       osc >= 0.162.1
+Requires:       osc
 Requires:       grc
+BuildRequires:  grc
 
 %description
 OSC conf files for GRC
