@@ -49,6 +49,7 @@ install -m 0644 conf.* %{buildroot}%{_datadir}/grc/
 %license LICENSE
 %doc README.md
 %config %{_sysconfdir}/grc.conf.d/00-osc.conf
+%{_sysconfdir}/grc.conf.d/
 %{_datadir}/grc/
 
 %changelog
