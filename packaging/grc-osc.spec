@@ -29,7 +29,7 @@ Source:         %{archive_prefix}-%{version}.tar.xz
 BuildArch:      noarch
 Requires:       osc
 Requires:       grc
-BuildRequires:  grc
+#BuildRequires:  grc
 
 %description
 OSC conf files for GRC
@@ -42,8 +42,8 @@ OSC conf files for GRC
 %install
 mkdir -p %{buildroot}%{grcoscdir}
 cp -r * %{buildroot}%{grcoscdir}
-test -f %{_sysconfdir}/etc/grc.conf || touch %{_sysconfdir}/grc.conf
-cat  %{buildroot}%{grcoscdir}/osc-grc.conf >> %{_sysconfdir}/grc.conf
+test -f %{buildroot}%{_sysconfdir}/grc.conf || touch %{buildroot}%{_sysconfdir}/grc.conf
+cat  %{buildroot}%{grcoscdir}/osc-grc.conf >> %{buildroot}%{_sysconfdir}/grc.conf
 
 %files
 %defattr(644,root,root)
